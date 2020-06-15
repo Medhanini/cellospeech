@@ -10,59 +10,31 @@
       md6
     >
       <div class="text-center">
-        <logo />
-        <vuetify-logo />
+        <v-img src="/cellospeech.com/CelloSpeech Logo.png" ></v-img>
       </div>
+  <v-carousel
+    cycle
+    height="400"
+    hide-delimiter-background
+    show-arrows-on-hover
+  >
+    <v-carousel-item
+      v-for="(slide, i) in slides"
+      :key="i"
+    >
+        <v-img :src="slide" ></v-img>
+    </v-carousel-item>
+  </v-carousel>
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
+          let's play it
         </v-card-title>
         <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
+          <p>There are many variations but the of passages of but the majority Lorem Ipsum available, but the majority have su</p>
           <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+            <em><small>&mdash; Imad Essaouissi</small></em>
           </div>
           <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
         </v-card-text>
         <v-card-actions>
           <v-spacer />
@@ -84,6 +56,19 @@ import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
 export default {
+  data () {
+      return {
+        slides: [
+          '/cellospeechgallery/1.jpg',
+          '/cellospeechgallery/2.jpg',
+          '/cellospeechgallery/3.jpg',
+          '/cellospeechgallery/4.jpg',
+          '/cellospeechgallery/5.jpg',
+          '/cellospeechgallery/6.jpg',
+          '/cellospeechgallery/7.jpg',
+        ]
+      }
+    },
   components: {
     Logo,
     VuetifyLogo
